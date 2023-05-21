@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import styles from './TodoApp.module.css';
+import './fonts.css';
 
 export const TodoApp = () => {
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem('tasks')) || []);
@@ -27,7 +28,7 @@ export const TodoApp = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className = {styles.container}>
     <h1>Todo List</h1>
     <input
       type="text"

@@ -1,18 +1,18 @@
 /* TodoApp.module.css */
 
 .container {
-    background-color: purple;
-    background-image: url('./background.jpg');
-    background-position: center;
+    background-color: purple; 
+    background-image: url('');
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
     padding: 1em;
     color: white;
+    font-family: 'PT Sans Narrow', sans-serif;
   }
   
   .button {
-    background-color: purple;
+    background-color: rgb(130, 103, 162);
     color: white;
     padding: 10px 20px;
     margin: 5px;
