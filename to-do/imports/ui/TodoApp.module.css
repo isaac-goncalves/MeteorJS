@@ -2,7 +2,7 @@
 
 .container {
     background-color: purple; 
-    background-image: url('');
+    background-image: url('/to-do/client/public/img/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
