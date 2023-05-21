@@ -1,0 +1,39 @@
+/* TodoApp.module.css */
+
+.container {
+    background-color: purple;
+    background-image: url('./background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 1em;
+    color: white;
+  }
+  
+  .button {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #9932CC;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: none;
+  }
+  
+  .list {
+    list-style: none;
+  }
