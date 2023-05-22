@@ -28,24 +28,28 @@ export const TodoApp = () => {
   };
 
   return (
-    <div className = {styles.container}>
-    <h1>Todo List</h1>
-    <input
-      type="text"
-      value={input}
-      onChange={handleInput}
-      className={styles.input}
-      placeholder="New task..."
-    />
-    <button onClick={addTask} className={styles.button}>Add Task</button>
-    <ul className={styles.list}>
-      {tasks.map(task => (
-        <li key={task.id}>
-          {task.text}
-          <button onClick={() => removeTask(task.id)} className={styles.button}>Remove</button>
-        </li>
-      ))}
-    </ul>
+    <div className = {styles.mainContainer}>
+      <div className = {styles.container}>
+        <h1 className= {styles.mainHeader}>To-do List</h1>
+      <div className = {styles.inputWrapper}>
+        <input
+          type="text"
+          value={input}
+          onChange={handleInput}
+          className={styles.input}
+          placeholder="Adicionar novo item a lista"
+        />
+        <button onClick={addTask} className={styles.insertButton}>Add Task</button>
+        </div>
+          <ul className={styles.list}>
+            {tasks.map(task => (
+              <li className={styles.todoWrapper} key={task.id}>
+                <p className={styles.listText}>{task.text}</p>
+                <button onClick={() => removeTask(task.id)} className={styles.deleteButton}>Remove</button>
+              </li>
+            ))}
+          </ul>
+    </div>
   </div>
   );
 };

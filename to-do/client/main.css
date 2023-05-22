@@ -1,4 +1,10 @@
-body {
-  padding: 10px;
-  font-family: sans-serif;
+html, body{
+  padding: none;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin: none;
+  
+}
+
+*{
+  box-sizing: border-box;
 }

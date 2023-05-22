@@ -1,39 +1,118 @@
-/* TodoApp.module.css */
+html, body{
+  padding: none;
+  font-family: 'PT Sans Narrow', sans-serif;
+  margin: none;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+.mainContainer{
+  background-image: url('/img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.mainHeader{
+  font-family: 'PT Sans Narrow', sans-serif;
+  padding: 0px;
+}
 
 .container {
-    background-color: purple; 
-    background-image: url('/to-do/client/public/img/background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    padding: 1em;
+    background-color: rgba(170, 167, 167, 0.665);
+    padding: 1rem 2rem;
     color: white;
     font-family: 'PT Sans Narrow', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;   
+    border-radius: 5px;
+    margin-top: 2rem;
+    
   }
   
-  .button {
+  .insertButton {
     background-color: rgb(130, 103, 162);
     color: white;
-    padding: 10px 20px;
-    margin: 5px;
+    padding: 0px;
+    margin-left: 0.5rem;
     border: none;
-    border-radius: 50px;
+    border-radius: 5px;
+    height: 3rem;
+    width: 5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .insertButton:hover {
+    background-color:rgb(113, 76, 159);
+  }
+
+  .deleteButton {
+    background-color:rgb(130, 103, 162);
+    color: white;
+    padding: 0px;
+    border: none;
+    border-radius: 5px;
+    height: 3rem;
+    min-width: 5rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
-  .button:hover {
-    background-color: #9932CC;
+  .deleteButton:hover {
+    background-color:rgb(158, 98, 98)
   }
   
   .input {
     width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    height: 100%;
+    padding-left: 1rem;
+    border-radius: 5px;
     border: none;
+    outline: none;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+  }
+
+  .inputWrapper{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
   
   .list {
     list-style: none;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;   
+    gap: 0.5rem;
   }
+
+  .listText{
+    padding-right: 1rem;
+    padding-left: 0.3rem;
+    word-wrap: break-word;
+
+  }
+  
+  .todoWrapper {
+    background-color: rgba(255, 255, 255, 0.271);
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  
