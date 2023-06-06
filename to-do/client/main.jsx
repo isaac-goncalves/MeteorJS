@@ -4,6 +4,7 @@ import { Meteor } from 'meteor/meteor';
 import { App } from '/imports/ui/App';
 import 'bootstrap/dist/css/bootstrap.css';
 
+
 Meteor.startup(() => {
   const container = document.getElementById('react-target');
   const root = createRoot(container);

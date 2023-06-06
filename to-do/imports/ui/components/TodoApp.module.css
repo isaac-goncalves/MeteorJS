@@ -34,7 +34,7 @@ html, body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 700px;   
+    max-width: 30%;  
     border-radius: 5px;
     margin-top: 2rem;
     
@@ -79,7 +79,7 @@ html, body{
     border-radius: 5px;
     border: none;
     outline: none;
-    margin-bottom: 0px;
+    margin-bottom: 1rem;
     box-sizing: border-box;
   }
 
@@ -97,6 +97,7 @@ html, body{
     display: flex;
     flex-direction: column;   
     gap: 0.5rem;
+    width: 100%;
   }
 
   .listText{
@@ -113,6 +114,7 @@ html, body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
 
   
