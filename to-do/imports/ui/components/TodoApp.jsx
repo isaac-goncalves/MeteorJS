@@ -50,6 +50,7 @@ export const TodoApp = () => {
             Meteor.call("api.tasks.create", userId, input, (error, result) => {
                 if (error) {
                     console.error("Error adding task:", error);
+                    alert("Error adding task");
                 } else {
                     console.log("result", result);
                     setTasks([...tasks, result]);
@@ -112,9 +113,9 @@ export const TodoApp = () => {
     };
 
     return (
-        <div className={styles.mainContainer} >
-        <Login />
-        <Registro />
+        <div className={styles.mainContainer}>
+            <Login />
+            <Registro />
             <div className={styles.container}>
                 <h1 className={styles.mainHeader}>To-do List</h1>
                 <h4 className={styles.mainHeader}>Bem Vindo, {userId}</h4>
@@ -127,7 +128,7 @@ export const TodoApp = () => {
                         placeholder="Adicionar novo item a lista"
                     />
                     <button onClick={addTask} className={styles.insertButton}>
-                        Add Task
+                        Add
                     </button>
                 </div>
                 <ul className={styles.list}>
@@ -149,7 +150,7 @@ export const TodoApp = () => {
                                 {editingTaskId === task._id ? (
                                     <div>
                                         <button
-                                        className={styles.insertButton}
+                                            className={styles.insertButton}
                                             onClick={() =>
                                                 saveEditing(task._id)
                                             }
@@ -157,8 +158,9 @@ export const TodoApp = () => {
                                             Save
                                         </button>
                                         <button
-                                        className={styles.insertButton}
-                                         onClick={cancelEditing}>
+                                            className={styles.insertButton}
+                                            onClick={cancelEditing}
+                                        >
                                             Cancel
                                         </button>
                                     </div>
@@ -175,7 +177,7 @@ export const TodoApp = () => {
                                         >
                                             Edit
                                         </button>
-                                        <button 
+                                        <button
                                             className={styles.insertButton}
                                             onClick={() => removeTask(task._id)}
                                         >

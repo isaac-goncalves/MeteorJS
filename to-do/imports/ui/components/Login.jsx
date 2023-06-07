@@ -34,8 +34,10 @@ export const Login = () => {
     return (
         <div className={styles.container}>
             <h2>Tela de Login</h2>
-            <div>
-                <label>Email</label>
+       
+            <div className={styles.inputWrapper}>  
+            
+                <label>Email:</label>
                 <input
                     className={styles.input}
                     type="email"
@@ -43,8 +45,8 @@ export const Login = () => {
                     onChange={(e) => setEmail(e.target.value)}
                 />
             </div>
-            <div>
-                <label>Senha</label>
+            <div className={styles.inputWrapper}>  
+                <label>Senha:</label>
                 <input
                     className={styles.input}
                     type="password"

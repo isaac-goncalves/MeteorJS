@@ -32,8 +32,8 @@ export const Registro = () => {
     return (
         <div className={styles.container}>
             <h2>Tela de Registro</h2>
-            <div className="form-group">
-                <label>Nome</label>
+            <div className={styles.inputWrapper}> 
+                <label>Nome:</label>
                 <input
                     type="text"
                     className={styles.input}
@@ -41,8 +41,8 @@ export const Registro = () => {
                     onChange={(e) => setNome(e.target.value)}
                 />
             </div>
-            <div className="form-group">
-                <label>Email</label>
+            <div className={styles.inputWrapper}> 
+                <label>Email:</label>
                 <input
                     type="email"
                     className={styles.input}
@@ -50,8 +50,8 @@ export const Registro = () => {
                     onChange={(e) => setEmail(e.target.value)}
                 />
             </div>
-            <div className="form-group">
-                <label>Senha</label>
+            <div className={styles.inputWrapper}> 
+                <label>Senha:</label>
                 <input
                     type="password"
                     className={styles.input}
