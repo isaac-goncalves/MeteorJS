@@ -13,9 +13,18 @@ export const Registro = () => {
         Meteor.call("users.register", nome, email, senha, (error, result) => {
             if (error) {
                 console.log("Error:", error);
+                alert("Erro ao registrar");
+                //clear fields
+                setNome("");
+                setEmail("");
+                setSenha("");
             } else {
                 console.log("Registration result:", result);
-                // Handle the registration result here
+                alert("Registrado com sucesso!");
+                //  clear inputs 
+                setNome("");
+                setEmail("");
+                setSenha("");
             }
         });
     };
@@ -27,7 +36,7 @@ export const Registro = () => {
                 <label>Nome</label>
                 <input
                     type="text"
-                    className="form-control"
+                    className={styles.input}
                     value={nome}
                     onChange={(e) => setNome(e.target.value)}
                 />
@@ -36,7 +45,7 @@ export const Registro = () => {
                 <label>Email</label>
                 <input
                     type="email"
-                    className="form-control"
+                    className={styles.input}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
@@ -45,12 +54,12 @@ export const Registro = () => {
                 <label>Senha</label>
                 <input
                     type="password"
-                    className="form-control"
+                    className={styles.input}
                     value={senha}
                     onChange={(e) => setSenha(e.target.value)}
                 />
             </div>
-            <button className="btn btn-primary" onClick={handleRegistro}>
+            <button className={styles.insertButton} onClick={handleRegistro}>
                 Registrar
             </button>
         </div>

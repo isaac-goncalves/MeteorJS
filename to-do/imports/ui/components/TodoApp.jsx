@@ -117,7 +117,7 @@ export const TodoApp = () => {
         <Registro />
             <div className={styles.container}>
                 <h1 className={styles.mainHeader}>To-do List</h1>
-                <h1 className={styles.mainHeader}>Bem Vindo, {userId}</h1>
+                <h4 className={styles.mainHeader}>Bem Vindo, {userId}</h4>
                 <div className={styles.inputWrapper}>
                     <input
                         type="text"
@@ -136,6 +136,7 @@ export const TodoApp = () => {
                             {editingTaskId === task._id ? (
                                 <input
                                     type="text"
+                                    className={styles.input}
                                     value={editingText}
                                     onChange={(e) =>
                                         setEditingText(e.target.value)
@@ -148,13 +149,16 @@ export const TodoApp = () => {
                                 {editingTaskId === task._id ? (
                                     <div>
                                         <button
+                                        className={styles.insertButton}
                                             onClick={() =>
                                                 saveEditing(task._id)
                                             }
                                         >
                                             Save
                                         </button>
-                                        <button onClick={cancelEditing}>
+                                        <button
+                                        className={styles.insertButton}
+                                         onClick={cancelEditing}>
                                             Cancel
                                         </button>
                                     </div>
